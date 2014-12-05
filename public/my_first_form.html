@@ -5,6 +5,7 @@
 </head>
 <body>
 
+<h3>User Login</h2>
 
 <form method="POST" action="http://requestb.in/pbt2l4pb">
 	<p>
@@ -15,10 +16,121 @@
 		<label for="password">Password</label>
 		<input type="password" id="password" name="password" placeholder="password!" >
 	</p>
+
+		<textarea id="email_body" name="email_body" rows="5" cols="40"></textarea>
 	<p>
 		<button type="submit">CLICK HERE!!</button>
 	</p>	
 </form>
+
+<br>
+
+<h3>Compose an Email</h3>
+
+<form method="POST" action="http://requestb.in/pbt2l4pb">
+	<p>
+		<label for="sendTo">To:</label>
+		<input type="text" id="SendTo" name="SendTo" placeholder="Send to?" >
+	</p>
+	<p>
+		<label for="from">From:</label>
+		<input type="text" id="from" name="from" placeholder="your name!" >
+	</p>
+	<p>
+		<label for="emailSubject">Subject:</label>
+		<input type="text" id="emailSubject" name="emailSubject" placeholder="Subject!" >
+	</p>
+
+		<textarea id="email_body" name="email_body" rows="20" cols="50"></textarea>
+
+	<p>
+	Would you like to save a copy of this message to your sent folder?
+	<label for="sent_folder">
+	
+		<input type="checkbox" id="sent_folder" name="sent_folder" value="yes" checked>
+	</label>
+	</p>
+
+	<p>
+		<button type="submit">Send Email!</button>
+	</p>	
+</form>
+
+<h3>Multiple Choice Test</h3>
+
+<form method="POST" action="http://requestb.in/pbt2l4pb">
+	<ol>
+		<li>
+			<p>How many coding bootcamps are in the US?</p>
+			<ol>
+				<li>
+					<label>
+						<input type="radio" id="bo1" name="bo[]" value="5">5
+					</label>
+				</li>
+
+				<li>
+					<label>
+						<input type="radio" id="bo2" name="bo[]" value="15">15
+					</label>
+				</li>
+
+				<li>
+					<label>
+						<input type="radio" id="bo3" name="bo[]" value="26">25
+					</label>
+				</li>
+			<li>
+				<label>
+					<input type="radio" id="bo4" name="bo[]" value="50">50
+				</label>
+			</li>
+		</ol>
+		</li>
+
+		<li>
+			<p>What is the best state in America?</p>
+			<ol>
+				<li>
+					<label>
+						<input type="radio" id="st1" name="st[]" value="California">California
+					</label>
+				</li>
+			<li>
+				<label>
+					<input type="radio" id="st2" name="st[]" value="Pennsylvania">Pennsylvania
+				</label>
+			</li>
+
+			<li>
+				<label>
+					<input type="radio" id="st3" name="st[]" value="Texas">Texas
+				</label>
+			</li>
+			<li>
+				<label>
+					<input type="radio" id="st4" name="st[]" value="Virginia">Virginia
+				</label>
+			</li>
+		</ol>
+		</li>
+	</ol>
+
+	<p>
+		<button color="green" type="submit">Finish Test</button>
+	</p>
+
+</form>
+
+
+<!--
+Add a new form below the existing forms with a heading of: "Multiple Choice Test".
+Add two or more question and answer sets using radio buttons. Experiment with the naming so that you understand how radio buttons are grouped.
+Try submitting the multiple choice test form and view the results in RequestBin with and without or without questions answered. What observations can you make?
+Add a question that has multiple answers using grouped checkboxes. Try submitting the form to RequestBin to see how the inputs work.
+Try removing the <label> elements from your checkboxes and radio buttons. Try clicking on the text next to the checkbox or radio button in the web browser. Notice the difference in behavior? Replace the labels when you are done.
+Finally, save your HTML file, commit the file to your git repository, and push to GitHub. -->
+
 
 </body>
 </html>
