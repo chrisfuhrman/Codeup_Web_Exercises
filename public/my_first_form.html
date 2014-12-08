@@ -7,7 +7,7 @@
 
 <h3>User Login</h2>
 
-<form method="POST" action="http://requestb.in/pbt2l4pb">
+<form method="POST" action="http://requestb.in/1czyzca1">
 	<p>
 		<label for="username">Username</label>
 		<input type="text" id="username" name="username" placeholder="enter username" >
@@ -58,7 +58,7 @@
 
 <h3>Multiple Choice Test</h3>
 
-<form method="POST" action="http://requestb.in/pbt2l4pb">
+<form method="POST" action="http://requestb.in/1czyzca1">
 	<ol>
 		<li>
 			<p>How many coding bootcamps are in the US?</p>
@@ -114,22 +114,44 @@
 			</li>
 		</ol>
 		</li>
-	</ol>
 
+		<li>
+			<label for="languages">What languages are we learning?</label>
+			<select id="languages" name="languages[]" multiple>
+		</li>
+			<option value="html">HTML</option>
+			<option value="Jave">Jave</option>
+			<option value="Javascript">Javascript</option>
+			<option value="Ruby">Ruby</option>
+			<option value="Python">Python</option>
+			<option value="CSS">CSS</option>
+			<option value="PHP">PHP</option>
+			<option value="C++">C++</option>
+	</ol>
+			</select>
 	<p>
 		<button color="green" type="submit">Finish Test</button>
 	</p>
 
 </form>
 
+<h2>Select Testing</h2>
 
-<!--
-Add a new form below the existing forms with a heading of: "Multiple Choice Test".
-Add two or more question and answer sets using radio buttons. Experiment with the naming so that you understand how radio buttons are grouped.
-Try submitting the multiple choice test form and view the results in RequestBin with and without or without questions answered. What observations can you make?
-Add a question that has multiple answers using grouped checkboxes. Try submitting the form to RequestBin to see how the inputs work.
-Try removing the <label> elements from your checkboxes and radio buttons. Try clicking on the text next to the checkbox or radio button in the web browser. Notice the difference in behavior? Replace the labels when you are done.
-Finally, save your HTML file, commit the file to your git repository, and push to GitHub. -->
+<form method="POST" action="http://requestb.in/1czyzca1">
+
+	<label for="newsletter">Would you like to sign up for our monthly newsletter?</label>
+	<select id="newsletter" name="newsletter">
+		<option value="1">Yes</option>
+		<option selected value="0">No thanks</option>
+	</select>
+	<p>
+		<button color="green" type="submit">Submit</button>
+	</p>
+
+
+
+
+
 
 
 </body>
