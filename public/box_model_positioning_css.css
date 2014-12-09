@@ -1,0 +1,77 @@
+/*
+  ========================================
+  
+  ========================================
+*/
+
+.container {
+	border: 1px solid black;
+	color: #fff;
+	font-weight: bold;
+
+	width: 50px;
+	height:50px;
+
+	padding: 10px;
+	margin-top: 22px;
+	margin-right: 50px;
+
+}
+h1 {
+	color: rgb(94, 45, 149);
+	text-decoration: underline;
+}
+
+/*
+  ========================================
+  colored boxes
+  ========================================
+*/
+
+#red_box {
+	background-color: rgb(216, 66, 49);
+	float: left;
+}
+#orange_box {
+	background-color: rgb(233, 173, 51);
+	float: left;
+}
+#yellow_box {
+	background-color: rgb(251, 247, 51);
+	float: left;
+}
+#green_box {
+	background-color: rgb(87, 140, 5);
+	margin-top: 50px;
+	clear: both;
+	float: left;
+}
+#blue_box {
+	background-color: rgb(35, 74, 251);
+	margin-top: 50px;
+	float: left;
+}
+#pink_box {
+	background-color: rgb(223, 139, 240);
+	margin-top: 50px;
+	float: left;
+}
+
+
+/*
+  ========================================
+  Codeup arrow positioning
+  ========================================
+*/
+.img {
+	position: relative;
+	bottom: 100px;
+	left: 45px;
+}
+
+
+
+
+
+
+
