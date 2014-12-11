@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External JS</title>
+</head>
+
+<body>
+
+
+
+    <script>
+		var colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+		var color = colors[Math.floor(Math.random()*colors.length)];
+
+		var favorite = 'green';
+
+		if (color == 'red') {
+			say = 'Red is not the color of my car';
+		} else if (color == 'orange') {
+			say = 'Orange is the worst color';
+		} else if (color == 'yellow') {
+			say = 'Yellow is the color of the sun';
+		} else if (color == 'green') {
+			say = 'Green is the best color';
+		} else if (color == 'blue') {
+			say = 'Blue is the color of my shirt';
+		} else {
+			say = 'I do not know anything by that color';
+		}
+
+		console.log(say + '\n \n');
+
+	var message = (favorite == color) ? color + ' is my favorite color': color + ' is not my favorite color';
+
+	console.log(message);
+
+	</script>
+</body>
+</html>
