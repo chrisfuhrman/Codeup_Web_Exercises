@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iterating Arrays in JS</title>
+</head>
+
+<body>
+
+    <script>
+
+    	var names = ['Chris', 'Matt', 'John', 'Justin'];
+
+		for (var i = 0; i < names.length; i++) {
+  			console.log(names[i]);
+		};
+
+		names.forEach(function(element, index, names) {
+			console.log(names[index]);
+		});
+
+		function loopArray(value, index, array) {
+			console.log(names[index]);	
+		}
+
+		names.forEach(loopArray);
+
+
+
+
+	</script>
+</body>
+</html>
