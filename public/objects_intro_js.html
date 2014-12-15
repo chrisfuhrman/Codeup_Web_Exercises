@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intro to JS Objects</title>
+</head>
+
+<body>
+
+    <script>
+
+		var person = {};
+		person.firstName = 'Chris';
+
+		person.lastName = 'Fuhrman';
+
+		person.sayHello = function () {
+			console.log("Hello " + this.firstName + ' ' + this.lastName);
+		}
+
+		person.sayHello();
+
+
+	</script>
+</body>
+</html>
+
+
