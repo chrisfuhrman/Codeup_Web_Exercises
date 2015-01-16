@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/site.css">  -->
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body>
+
+ <div class="container" id="intro-container">
+ 	<h1 class="font" id="codeup">Hello Codeup</h1>
+
+ 	<p class="font"id="p-1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod neque consequuntur odit placeat dolore, nam architecto illum quidem earum, magnam aliquam cum a. Necessitatibus, tempora, labore? Tempora aliquid, odio minus!
+ 	</p>
+
+ 	<p class="font" id="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ea, quo ullam quos cum dolor quis quibusdam sequi facilis, voluptatem voluptatibus, quas harum dignissimos voluptate! Eius incidunt expedita et! Officiis!</p>
+
+ 	<ul class="font" id="list">
+ 		<h4>Cities</h4>
+ 		<li>Philly</li>
+ 		<li>Austin</li>
+ 		<li>San Antonio</li>
+ 		<li>Houston</li>
+ 	</ul>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	
+
+(function() {
+
+	$('h1').on('click', function() {
+		$(this).css('background-color', 'yellow');
+	});
+
+
+	$('p').on('dblclick', function() {
+		$(this).css('font-size', '18px');
+	});
+
+	$('li').hover(
+		function () {
+			$(this).css('color', 'red');
+		},
+		function () {
+			$(this).css('color', 'black');
+		}
+	);
+
+	var info = $('#codeup').html('Hello Test');
+
+})();
+
+
+
+</script>
+
+
+</body>
+</html>
+

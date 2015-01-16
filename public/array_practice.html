@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scope in JS</title>
+</head>
+
+<body>
+
+    <script>
+
+		var classroom = [
+		'Nicole',
+		'Calvin',
+		'Felice',
+		'David',
+		'Kevin',
+		'Michael',
+		'Stephanie (Beyonce)',
+		'Paul',
+		'Chris',
+		'Jeff',
+		'Marissa',
+		'Travis'
+		];
+
+		classroom.forEach(function(element, index, array) {
+			if (classroom[index] == 'Chris') {
+				var message = 'that is me';
+			} else if (classroom[index] == 'Jeff') {
+				var message = 'that is my neighbor';
+			}
+			console.log(message);
+		});
+
+
+	</script>
+</body>
+</html>

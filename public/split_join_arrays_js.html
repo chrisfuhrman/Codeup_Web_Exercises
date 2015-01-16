@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scope in JS</title>
+</head>
+
+<body>
+
+    <script>
+
+		var planets = [
+		'Mercury',
+		'Venus',
+		'Earth',
+		'Mars',
+		'Jupiter',
+		'Saturn',
+		'Uranus',
+		'Neptune'
+		];
+
+		var planetsAsString = planets.join(' | ');
+		console.log(planetsAsString);
+
+		var planetsAsArray = planetsAsString.split(' | ');
+		console.log(planetsAsArray);
+
+	</script>
+</body>
+</html>

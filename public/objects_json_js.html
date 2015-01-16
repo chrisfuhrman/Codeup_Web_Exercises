@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scope in JS</title>
+</head>
+
+<body>
+
+    <script>
+
+    	var books = [
+    		{
+    			'title': 'Traction',
+    			'author': {
+    				'firstName': 'Gabriel',
+    				'lastName': 'Weinberg'
+				}
+    		},
+
+    		{
+    			'title': 'The Lean Startup',
+    			'author': {
+    				'firstName': 'Eric',
+    				'lastName': 'Ries'
+    			}
+    		},
+
+    		{
+    			'title': 'The Startup Owners\'s Manual',
+    			'author': {
+    				'firstName': 'Steve',
+    				'lastName': 'Blank'
+    			}   
+    		},
+
+    		{
+    			'title': 'Advance Google AdWords',
+    			'author': {
+    				'firstName': 'Brad',
+    				'lastName': 'Geddes'
+    			}  
+    		},
+
+    		{
+    			'title': 'My Book',
+    			'author': {
+    				'firstName': 'Chris',
+    				'lastName': 'Fuhrman'
+    			}
+    		}
+
+    	];
+
+		books.forEach(function (element, index, array) {
+			console.log("Title: " + element.title);
+			console.log("Author: " + element.author.firstName);
+			console.log("Author: " + element.author.lastName);
+			});
+
+	</script>
+</body>
+</html>

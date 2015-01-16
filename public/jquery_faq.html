@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practing JQuery</title>
+
+
+<link rel="stylesheet" type="text/css" href="evergreenmaids/css/site.css">
+
+<style>
+    .display-hide {
+        display: none;
+    }
+
+</style>
+
+</head>
+
+<body>  
+
+    <h3 id="header-yosemite">Yosemite National Park</h3>
+    <ul id="yosemite-list">
+        <li>
+            Unrestricted camping is no longer allowed in Yosemite Valley because of damage it causes. The placement of campgrounds and campsites has changed over the past 75 years in response to a growing understanding of river dynamics, geologic hazards, and the park's natural and cultural resources.      
+        </li>
+
+        <li>
+            The Merced River was designated a National Wild and Scenic River in 1987. Eighty-one miles of river runs through Yosemite National Park, including a stretch in Yosemite Valley.
+        </li>
+
+        <li>
+            Riparian communities are adjacent to the river channel and tributaries; they are the interface between the river and surrounding meadow and upland communities. They provide specialized habitat and important nutrients to the meadow and river systems.
+        </li>
+
+        <li>
+            Youth from local communities show off their artistic talent through poetry and art in Yosemite National Park’s Gateway Expressions Art and Poetry Contest. Families and park staff celebrate the creative talents of these local students through a special exhibit at The Ansel Adams Gallery in the fall.
+        </li>
+    </ul>
+
+    <h3 id="header-yellowstone">Yellowstone National Park</h3>
+    <ul id="list-">
+        <li>
+            There are more people hurt by bison than by bears each year in Yellowstone. Park regulations state that visitors must stay at least 25 yards away from bison or elk and 100 yards away from bears.     
+        </li>
+
+        <li>
+            Yellowstone contains approximately one-half of the world’s hydrothermal features. There are over 10,000 hydrothermal features, including over 300 geysers, in the park.
+        </li>
+
+        <li>
+           Prior to the establishment of the National Park Service, the U.S. Army protected Yellowstone between 1886 and 1918. Fort Yellowstone was established at Mammoth Hot Springs for that purpose.
+        </li>
+
+        <li>
+            The 1988 fires affected 793,880 acres or 36 percent of the park. Five fires burned into the park that year from adjacent public lands. The largest, the North Fork Fire, started from a discarded cigarette. It burned more than 410,000 acres.        
+        </li>
+    </ul>
+
+    <h3 id="header-grand-teton">Grand Teton National Park</h3>
+    <ul>
+        <li>
+           Did you know that Uinta ground squirrels, sometimes mistaken for prairie dogs, hibernate up to eight months a year? These animals leave their burrows in March or April to inhabit the sagebrush flats, but may return by the end of July.     
+        </li>
+
+        <li>
+           Did you know that pronghorns are the fastest mammals in the western hemisphere? They can run up to 70 mph, but do not like to jump fences! In the summer, pronghorn live along Antelope Flats Road, but in fall they migrate almost 200 miles to central Wyoming.
+        </li>
+
+        <li>
+            Did you know that the granite and gneiss composing the core of the Teton Range are some of the oldest rocks in North America, but the mountains are among the youngest in the world?
+        </li>
+
+        <li>
+            Did you know that a large fault lies at the base of the Teton Range? Every few thousand years earthquakes up to a magnitude of 7.5 on the Richter Scale signal movement on the Teton fault, lifting the mountains skyward and hinging the valley floor downward.
+        </li>
+    </ul>
+
+
+<h2>FAQ</h2>
+    <dl>
+        <dt>Q1</dt>
+        <dd>Test</dd>
+
+        <dt>Q2</dt>
+        <dd>Test</dd>
+
+        <dt>Q3</dt>
+        <dd>Test</dd>
+
+        <dt>Q4</dt>
+        <dd>Test</dd>
+
+        <dt>Q5</dt>
+        <dd>Test</dd>
+
+        <dt>Q6</dt>
+        <dd>Test</dd>
+
+        <dt>Q7</dt>
+        <dd>Test</dd>
+
+        <dt>Q8</dt>
+        <dd>Test</dd>
+
+        <dt>Q9</dt>
+        <dd>Test</dd>  
+
+        <dt>Q10</dt>
+        <dd>Test</dd>
+
+    </dl>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script>
+
+    (function() {
+
+        $('dd').filter(':nth-child(n+4)').addClass('display-hide');
+
+        // $('dd').addClass('hide');
+        
+        $('dl').on('mouseenter', 'dt', function() {
+            $(this)
+                .next()
+                    .fadeIn(200)
+                    .siblings('dd')
+                        .fadeOut(200);
+        });
+
+
+        $('ul').each(function() {
+            $(this).children().first('li').css('font-weight', 'bold');
+        });
+
+
+
+        $('h3').on('click', function () {
+            $(this).next().slideToggle();
+        });
+
+
+    })();
+
+</script>
+
+
+
+
+
+</body>
+</html>

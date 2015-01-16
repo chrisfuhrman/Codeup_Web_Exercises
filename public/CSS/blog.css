@@ -1,0 +1,36 @@
+.navbar {
+	background-color: rgba(38, 194, 129, .9);
+}
+
+body {
+	padding-top: 50px;
+}
+
+.navbar-default .navbar-nav > li> a {
+	color: white;
+}
+
+header {
+	margin-bottom: 1px;
+}
+
+/*
+  ========================================
+  Blog Area
+  ========================================
+*/
+
+.blog-area {
+	background-color: rgba(236, 240, 241, 1);
+}
+
+.inner-blog-area {
+	margin: 10px;
+	
+}
+
+.author-date {
+	font-size: .7em ;
+	font-family: ;
+}
+

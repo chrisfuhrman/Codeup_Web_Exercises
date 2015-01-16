@@ -24,28 +24,27 @@
     </p>
 
 
-    <button style="background-color: salmon" id="btn1">Change Header</button>
-    <button style="background-color: salmon" id="btn2">Change subHeader to blue</button>
-    <button style="background-color: salmon" id="btn3">every other li salmon</button>
-    <button style="background-color: salmon" id="btn4">Change first Li to blue</button>
+    <button style="background-color: salmon; color: white" id="btn1">Change Header</button>
+    <button style="background-color: salmon; color: white" id="btn2">Change subHeader to blue</button>
+    <button  style="background-color: salmon; color: white" id="btn3">every other li salmon</button>
+    <button  style="background-color: salmon; color: white" id="btn4">Change first Li to blue</button>
 
 
 
     <script>
         // todo: get the main header element by id
-        var mainHeader = document.getElementById('main-header');
 
-        var changeHeader = function(e) {
-            mainHeader.innerHTML = 'JavaScript is Cool';
-        }
+        
 
-        var btn1 = document.getElementById('btn1');
-        btn1.addEventListener('click', changeHeader);
+        document.getElementById('btn1').addEventListener('click', function() {
+            document.getElementById('main-header').innerHTML = 'JavaScript is Cool';
+        });
+
 
 
         var subHeader = document.getElementById('sub-header');
         // todo: set the text color of subHeader to blue
-        var changeSubHeaderBlue = function(e) {
+        var changeSubHeaderBlue = function (e) {
             subHeader.style['color'] = 'blue';
         }
 
