@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+	<title></title>
 </head>
 
 <body>
 
+	<script>
 
+		do {
+			var response = prompt('Please enter your name');
+		} while (response == '')
 
-    <script>
+		alert('Welcome to my website ' + response + '!');
+		
+		do {
+			var response_2 = prompt('Do you like pizza?');
+		} while (response_2 == '')
 
-	    do {
-	    	var response = prompt('Please enter your name');
-	    } while (response == '')
-
-	    alert('Welcome to my website ' + response + '!');
-	    
-	    do {
-	    	var response_2 = prompt('Do you like pizza?');
-	    } while (response_2 == '')
 
 	   if (response_2 == 'yes') {
-	   	alert('Pizza is garbage!');
+		alert('Pizza is garbage!');
 	   } else {
-	   	alert('Pizza is awesome!');
+		alert('Pizza is awesome!');
 	   }
 
 	</script>

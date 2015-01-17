@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Objects - Math - JS</title>
+	<title>Objects - Math - JS</title>
 </head>
 
 <body>
 
-    <script>
+	<script>
 
+		var circle = {
 
+			radius: 3,
 
-        var circle = {
+			getArea: function () {
+				var area = Math.PI * Math.pow(this.radius, 2);
+				return area;
+			},
 
-            radius: 3,
+			logInfo: function (round) {
+				if (round) {
+					this.area = Math.round(this.getArea()); 
+				} else {
+					this.area = this.getArea();
+				}
 
-            getArea: function () {
-                var area = Math.PI * Math.pow(this.radius, 2);
-                return area;
-            },
-
-            logInfo: function (round) {
-                if (round) {
-                    this.area = Math.round(this.getArea()); 
-                } else {
-                    this.area = this.getArea();
-                }
-
-                console.log('Area of a circle with radius: ' + this.radius + ', is: ' + this.area);
-            }
-        };  
-
-
-
-     
-        circle.logInfo(false);
-        circle.logInfo(true);
-
-
+				console.log('Area of a circle with radius: ' + this.radius + ', is: ' + this.area);
+			}
+		};  
+	 
+		circle.logInfo(false);
+		circle.logInfo(true);
 
 	</script>
 </body>

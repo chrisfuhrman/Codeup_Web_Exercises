@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Objects - Math - JS</title>
+	<title>Objects - Math - JS</title>
 </head>
 
 <body>
 
-    <script src="/js/moment.js"></script>
-    <script>
+	<script src="/js/moment.js"></script>
+	
+	<script>
 
-        var months = 
-        [
-        'January', 
-        'February', 
-        'March', 
-        'April', 
-        'May', 
-        'June',
-        'July', 
-        'August', 
-        'September', 
-        'October', 
-        'November', 
-        'December'
-        ];
+		var months = 
+		[
+		'January', 
+		'February', 
+		'March', 
+		'April', 
+		'May', 
+		'June',
+		'July', 
+		'August', 
+		'September', 
+		'October', 
+		'November', 
+		'December'
+		];
 
-        var jsBirthday = new Date(1986, 4, 11);
+		var jsBirthday = new Date(1986, 4, 11);
 
-        
-        console.log('Here is my birthday using vanilla js: ' + jsBirthday);
+		
+		console.log('Here is my birthday using vanilla js: ' + jsBirthday);
 
-        var momentBirthday = moment(jsBirthday).format('MMMM Do YYYY');
-        console.log('Here is my birthday using Moment.js: ' + momentBirthday );
+		var momentBirthday = moment(jsBirthday).format('MMMM Do YYYY');
+		console.log('Here is my birthday using Moment.js: ' + momentBirthday );
 
 	</script>
-
-
 
 </body>
 </html>

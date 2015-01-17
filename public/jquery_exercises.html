@@ -14,13 +14,11 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/site.css">  -->
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-
-
 </head>
 <body>
 
  <div class="container" id="intro-container">
+ 	
  	<h1 class="font" id="codeup">Hello Codeup</h1>
 
  	<p class="font"id="p-1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod neque consequuntur odit placeat dolore, nam architecto illum quidem earum, magnam aliquam cum a. Necessitatibus, tempora, labore? Tempora aliquid, odio minus!
@@ -40,33 +38,33 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <script>
 	
 
-(function() {
+	(function() {
 
-	$('h1').on('click', function() {
-		$(this).css('background-color', 'yellow');
-	});
+		$('h1').on('click', function() {
+			$(this).css('background-color', 'yellow');
+		});
 
 
-	$('p').on('dblclick', function() {
-		$(this).css('font-size', '18px');
-	});
+		$('p').on('dblclick', function() {
+			$(this).css('font-size', '18px');
+		});
 
-	$('li').hover(
-		function () {
-			$(this).css('color', 'red');
-		},
-		function () {
-			$(this).css('color', 'black');
-		}
-	);
+		$('li').hover(
+			function () {
+				$(this).css('color', 'red');
+			},
+			function () {
+				$(this).css('color', 'black');
+			}
+		);
 
-	var info = $('#codeup').html('Hello Test');
+		var info = $('#codeup').html('Hello Test');
 
-})();
-
+	})();
 
 
 </script>
