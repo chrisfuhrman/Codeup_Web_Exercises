@@ -17,6 +17,7 @@ $query =
     location VARCHAR(255) NOT NULL,
     date_established DATE NOT NULL,
     area_in_acres FLOAT(12, 2) NOT NULL,
+    description TEXT NOT NULL,
     PRIMARY KEY (id)
     )';
 

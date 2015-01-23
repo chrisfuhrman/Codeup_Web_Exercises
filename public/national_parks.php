@@ -11,35 +11,35 @@ define('DB_PASS', 'codeup');
 require_once '../db_connect.php';
 
 
-
-
+// Determines the number of parks in db
 $countStmt = $dbc->query('SELECT count(*) FROM national_parks');
 $parkNum = $countStmt->fetchColumn();
+// Amount of parks to display per page
+$limNum = 4;
 
-$parks = $dbc->query('SELECT * FROM national_parks');
-$parks = $parks->fetchAll(PDO::FETCH_ASSOC);
-// print_r($parks);
+// Determine page count
+$pageCount = ceil($parkNum / $limNum);
 
-// foreach ($parks as $park) {
-// 	foreach ($park as $key) {
-// 		echo $key;
-// 	}
-// }
+if (!isset($_GET['page'])) {
+	$offsetNum = 0;
+	$page = 1; 
 
-$query = "SELECT * FROM national_parks";
-$stmt = $dbc->query($query);
-// print_r($stmt);
-
-// $results = $stmt->($query);
+} else {
+	$page = $_GET['page'];
+	$offsetNum = ($page != 1) ? ($page - 1) * 4: 0;
+}
 
 
 
+$stmt = $dbc->prepare(
+	'SELECT * FROM national_parks
+	 LIMIT :limNum OFFSET :offsetNum'
+);
 
-/* $_GET */
+$stmt->bindValue(':limNum', $limNum, PDO::PARAM_INT);
+$stmt->bindValue(':offsetNum', $offsetNum, PDO::PARAM_INT);
 
-// while ($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
-// 	print_r($row);
-// }
+$stmt->execute();
 
 ?>
 
@@ -69,6 +69,11 @@ $stmt = $dbc->query($query);
 	padding-right: 15px;
 	}
 
+	.page-btn {
+		background-color: green;
+		color: #fff;
+	}
+
 	#footer {
 		margin-top: 40px;
 		background-color: gray;
@@ -76,6 +81,20 @@ $stmt = $dbc->query($query);
 	}
 	.center-text {
 		text-align: center;
+	}
+
+	#footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	#page-num-div {
+		margin-top: 15px;		 
+	}
+
+	.clear-fix {
+		clear: both;
 	}
 </style>
 
@@ -93,19 +112,46 @@ $stmt = $dbc->query($query);
 				<th>Date Established</th>
 				<th>Acres</th>
 			</tr>
-	<? while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-		   
-		<tr><td> <?= $row['name']; ?> </td>	
-		<td> <?= $row['location']; ?> </td>
-		<td> <?= $row['date_established']; ?> </td>
-		<td> <?= $row['area_in_acres']; ?> </td> </tr>
 
-	<? endwhile; ?> </table>
+		<? while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+			   
+			<tr>
+				<td> <?= $row['name']; ?> </td>	
+				<td> <?= $row['location']; ?> </td>
+				<td> <?= $row['date_established']; ?> </td>
+				<td> <?= $row['area_in_acres']; ?> </td>
+			</tr>
 
-<div id="button-group">
-	<button type="button" class="btn btn-primary my-btn bck-btn pull-left"> &#8592; Previous </button>
-	<button type="button" class="btn btn-primary my-btn pull-right">Next &#8594; </button>
-</div>
+		<? endwhile; ?> </table>
+
+		<div id="button-group">
+
+			<? if ($page >= 2) : ?>
+				<a class="btn btn-primary my-btn bck-btn pull-left" href="?page=<?= --$page; ?>"> &#8592; Previous</a>
+
+				<? ++$page; ?>
+			<? endif; ?>
+
+			<? if ($page < $pageCount) : ?>
+				<a class="btn btn-primary my-btn pull-right" href="?page=<?= ++$page; ?>">Next &#8594;</a>				  
+			<? endif; ?>
+
+		</div>
+
+
+		<div class="clear-fix"></div>
+
+
+		<div id="page-num-div">
+
+			<? for ($i = 1; $i <= $pageCount; $i++) : ?>
+				<? if ($i == $page) : ?>
+				<? else : ?>
+					<a class="btn btn-primary page-btn" href="?page=<?= $i; ?>"> <?= $i; ?> </a>				  
+				<? endif ?> 
+			<? endfor ?>
+
+		</div>
 		
 	</div>
 
